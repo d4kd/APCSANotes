@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Numbers
+comment1.params=
+comment1.target=void\ printRandomNumber()
+comment2.params=
+comment2.target=void\ zeroToNine()
+comment2.text=Print\ a\ random\ number\ from\ 0-9\r\n\ \r\n
+comment3.params=
+comment3.target=void\ oneToTen()
+comment4.params=
+comment4.target=void\ zeroToHundred()
+comment5.params=
+comment5.target=void\ n27to79()
+comment6.params=
+comment6.target=void\ n465to780()
+numComments=7
