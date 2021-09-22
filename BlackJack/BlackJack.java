@@ -3,15 +3,28 @@
  * Write a description of class BlackJack here.
  *
  * @author (your name)
- * @version (a version number or a date)
+ * @version 9.22.21
  */
 import java.lang.Math;
 import java.util.Scanner;
 public class BlackJack
 {    
+    Scanner ran = new Scanner(System.in);
     private String input;
-        public BlackJack(){
-        Scanner ran = new Scanner(System.in);
+    
+    private String player;
+    private String dealer;
+    private boolean flip;
+    private boolean pull;
+    public BlackJack(String thePlayer, String theDealer, boolean theFlip, 
+    boolean thePull){
+        flip = theFlip;
+        pull = thePull;
+        player = thePlayer;
+        dealer = theDealer;
+    }
+    
+    public String player(){
         int cardNum1 = (int)(Math.random() * 7 + 2);
         int playerTotal = 0;
         int newTotal1 = 0;
@@ -37,15 +50,7 @@ public class BlackJack
             }
             System.out.println("The total for Player is " + newTotal1);
         } 
-    }
-    
-    private String dealer;
-    private String player;
-    private boolean flip;
-    private boolean pull;
-    public BlackJack(boolean theFlip, boolean thePull){
-        flip = theFlip;
-        pull = thePull;
+        return "The player is finished playing.";
     }
     
     public String dealer(){
@@ -87,12 +92,5 @@ public class BlackJack
             return "The Delear's card is flipped.";
         }
         return "The Dealer's card isn't flipped yet.";
-    }
-    
-    public boolean isFlip(){
-        return flip;
-    }
-        public boolean isPull(){
-        return pull;
     }
 }
