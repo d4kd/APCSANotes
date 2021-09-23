@@ -5,15 +5,18 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.Scanner;
 public class Hand
 {
     public static void main(){
-        //BlackJack playerHand = new BlackJack();
-        //BlackJack dealerHand = new BlackJack();
+        BlackJack myJack;
+        myJack = new BlackJack();
         
-        System.out.println("Dealer has two cards, one is faced down.");
-        System.out.println("The game has started, pull a card.");
-        //String Result = playerHand.pullCard();
-        //System.out.println(result);
+        BlackJack yourJack;
+        yourJack = new BlackJack();
+        
+        System.out.println("The dealer has set up the game.");
+        String result = myJack.pullCard();
+        System.out.println(result);
     }
 }

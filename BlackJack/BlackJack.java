@@ -9,22 +9,30 @@ import java.lang.Math;
 import java.util.Scanner;
 public class BlackJack
 {    
-    Scanner ran = new Scanner(System.in);
-    private String input;
-    
     private String player;
     private String dealer;
     private boolean flip;
     private boolean pull;
+    private boolean bust;
     public BlackJack(String thePlayer, String theDealer, boolean theFlip, 
-    boolean thePull){
+    boolean thePull, boolean theBust){
         flip = theFlip;
         pull = thePull;
+        bust = theBust;
         player = thePlayer;
         dealer = theDealer;
     }
     
+    public BlackJack(){
+        flip = false;
+        pull = true;
+        bust = false;
+        player = "Jose";
+        dealer = "Comp";
+    }
+    
     public String player(){
+        Scanner input = new Scanner(System.in);
         int cardNum1 = (int)(Math.random() * 7 + 2);
         int playerTotal = 0;
         int newTotal1 = 0;
@@ -32,23 +40,12 @@ public class BlackJack
         while (i < 0){
             i++;
             if (cardNum1 == 21){
-                System.out.println("Player has Won!");
+                return("Player has Won!");
             }else if (cardNum1 < 21){
-                System.out.println("Would you like to Hit?");
-                if (input.equals("hit")){
-                    System.out.println("Player got " + cardNum1);
-                    newTotal1 = (playerTotal + cardNum1);
-                    newTotal1 = playerTotal;
-                }else if (input.equals("stop")){
-                    System.out.println("Player's turn is over");
-                    System.out.println("Player's card total is" + playerTotal);
-                }else{
-                    System.out.println("ERROR");
-                }
+                return("Would you like to Hit?");
             }else if (cardNum1 > 21){
-                System.out.println("Player has Lost!");
+                System.out.println("Player has Bust!");
             }
-            System.out.println("The total for Player is " + newTotal1);
         } 
         return "The player is finished playing.";
     }
@@ -69,7 +66,7 @@ public class BlackJack
                 newTotal2 = compTotal;
                 System.out.println("Dealer's card total is" + compTotal);
             }else if (cardNum2 > 21){
-                System.out.println("Both turns are over");
+                System.out.println("Dealer has Bust!");
                 System.out.println("Player has Won!");
             }else{
                 System.out.println("ERROR");
@@ -92,5 +89,12 @@ public class BlackJack
             return "The Delear's card is flipped.";
         }
         return "The Dealer's card isn't flipped yet.";
+    }
+        public String bustGame(){
+        if(!bust){
+            bust = true;
+            return "The current player has bust.";
+        }
+        return "The current player hasn't bust yet.";
     }
 }

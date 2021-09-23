@@ -1,7 +1,4 @@
 #BlueJ package file
-dependency1.from=Hand
-dependency1.to=BlackJack
-dependency1.type=UsesDependency
 editor.fx.0.height=702
 editor.fx.0.width=852
 editor.fx.0.x=1075
@@ -12,11 +9,11 @@ package.divider.horizontal=0.6
 package.divider.vertical=0.6769911504424779
 package.editor.height=146
 package.editor.width=643
-package.editor.x=1152
-package.editor.y=723
+package.editor.x=275
+package.editor.y=656
 package.frame.height=322
 package.frame.width=773
-package.numDependencies=1
+package.numDependencies=0
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
