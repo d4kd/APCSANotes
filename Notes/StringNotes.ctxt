@@ -1,9 +1,15 @@
 #BlueJ class context
 comment0.target=StringNotes
 comment1.params=
-comment1.target=void\ main()
+comment1.target=void\ main1()
 comment2.params=
 comment2.target=void\ main2()
 comment3.params=
 comment3.target=void\ main3()
-numComments=4
+comment4.params=
+comment4.target=void\ main4()
+comment5.params=
+comment5.target=void\ main5()
+comment6.params=str
+comment6.target=void\ printVertically(java.lang.String)
+numComments=7

@@ -8,7 +8,7 @@
 import java.util.Scanner;
 public class StringNotes
 {
-    public static void main(){
+    public static void main1(){
         int c = 5;
         int d = 5;
         System.out.println(c == d);
@@ -45,7 +45,33 @@ public class StringNotes
         System.out.println(b);
         int c = a.toLowerCase().indexOf("THE".toLowerCase());
         System.out.println(c);
-        int d = a.toLowerCase().indexOf("the", 2); // Skip over using "", int
+        int d = a.toLowerCase().indexOf("the", 10); // Skip over using "", int
         System.out.println(d);
+    }
+    public static void main4(){
+        System.out.println("Pick a letter");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        if (input.equals("h")){
+            System.out.println("You typed in an \"H\"");
+        }else{
+            System.out.println("You did not type in an \"H\"");
+        }
+    }
+    public static void main5(){
+        String a = "Carnival";
+        String b = "Pineapple";
+        String c = "Cheese";
+        System.out.println(a.compareTo(b)); // Num of space between ca - pi -
+        System.out.println(b.compareTo(a)); // Num of space between pi - ca +
+        System.out.println(a.compareTo(c)); // Num of space between ca - ch -
+        System.out.println(c.compareTo(a)); // Num of space between ch - ca +
+        // If second word come first, alphabetically, it will be positive.
+        // If first word come first, alphabetically, it will be negative.
+    }
+    public static void printVertically(String str){
+        for(int i = 0; i < str.length(); i++){
+            System.out.println(str.substring(i, i+1));
+        }
     }
 }
