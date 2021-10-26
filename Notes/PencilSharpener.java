@@ -47,7 +47,7 @@ public class PencilSharpener{
         public String getBrand(){
         return brand;
     }
-    public String getColor(){
+        public String getColor(){
         return color;
     }
         public String getBlade(){
