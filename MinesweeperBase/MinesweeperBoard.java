@@ -55,35 +55,35 @@ public class MinesweeperBoard{
         for (int i = 0; i < board.length; i++){
             if (!board[i].isMine()){
                 int count = 0;
-                if (i+1 < board.length && board[i+1].isMine()){
+                if (i % columns != columns -1 && i+1 < board.length && board[i+1].isMine()){
                     // Num to the Right (columns + 1)
                     count++; //Use Mod
                 }
-                if (i-1 >= 0 && board[i-1].isMine()){
+                if (i % columns != 0 && i-1 >= 0 && board[i-1].isMine()){
                     // Num to the Left (columns - 1)
                     count++; //Use Mod
                 }
-                if (i-columns >= 0 && board[i-columns].isMine()){
+                if (i % columns != columns -1 && i-columns >= 0 && board[i-columns].isMine()){
                     // Num Upward (rows - columns)
                     count++; //Use Mod
                 }
-                if (i+columns < board.length && board[i+columns].isMine()){
+                if (i % columns != 0 && i+columns < board.length && board[i+columns].isMine()){
                     // Num Downward (rows + columns)
                     count++; //Use Mod
                 }
-                if ((i-columns) + 1 >= 0 && board[(i-columns) + 1].isMine()){
+                if (i % columns != columns -1 && (i-columns) + 1 >= 0 && board[(i-columns) + 1].isMine()){
                     // Num Upward Right (rows - columns) + 1
                     count++; //Use Mod
                 }
-                if ((i-columns) - 1 >= 0 && board[(i-columns) - 1].isMine()){
+                if (i % columns != 0 && (i-columns) - 1 >= 0 && board[(i-columns) - 1].isMine()){
                     // Num Upward Left (rows - columns) - 1
                     count++; //Use Mod
                 }
-                if ((i+columns) + 1 < board.length && board[(i+columns) + 1].isMine()){
+                if (i % columns != columns -1 && (i+columns) + 1 < board.length && board[(i+columns) + 1].isMine()){
                     // Num Downward Right (rows + columns) + 1
                     count++; //Use Mod
                 }
-                if ((i+columns) - 1 < board.length && board[(i+columns) - 1].isMine()){
+                if (i % columns != 0 && (i+columns) - 1 < board.length && board[(i+columns) - 1].isMine()){
                     // Num Downward Left (rows + columns) - 1
                     count++; //Use Mod
                 }
@@ -120,3 +120,5 @@ public class MinesweeperBoard{
         return panel;
     }
 }
+
+
