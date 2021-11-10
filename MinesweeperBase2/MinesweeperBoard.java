@@ -55,28 +55,32 @@ public class MinesweeperBoard{
                     if (c-1 >= 0 && board[r][c-1].isMine()){
                         // Num to the Left (columns - 1)
                         count++;
-                    }if (c+1 < columns && board[r][c+1].isMine()){
+                    }
+                    if (c+1 < columns && board[r][c+1].isMine()){
                         // Num to the Right (columns + 1)
                         count++;
                     }
-                    if (r-columns >= 0 && board[r-columns][c].isMine()){
+                    if (r-1 >= 0 && board[r-1][c].isMine()){
                         // Num Upward (rows - columns)
                         count++;
                     }
-                    if ((r-columns) - 1 >= 0 && board[(r-columns)-1][c-1].isMine()){
+                    if (r-1 >= 0 && c-1 >= 0 && board[r-1][c-1].isMine()){
                         // Num Upward Left (rows - columns) - 1
                         count++;
-                    }if ((r-columns) + 1 >= 0 && board[(r-columns)+1][c+1].isMine()){
+                    }
+                    if (r-1 >= 0 && c+1 < columns && board[r-1][c+1].isMine()){
                         // Num Upward Right (rows - columns) + 1
                         count++;
-                    }if (r+columns < board.length && board[r+columns][c].isMine()){
+                    }
+                    if (r+1 < rows && board[r+1][c].isMine()){
                         // Num Downward (rows + columns)
                         count++;
                     }
-                    if ((r+columns) - 1 < board.length && board[(r+columns) - 1][c-1].isMine()){
+                    if (r+1 < rows && c-1 >= 0 && board[r+1][c-1].isMine()){
                         // Num Downward Left (rows + columns) - 1
                         count++;
-                    }if ((r+columns) + 1 < board.length && board[(r+columns)+1][c+1].isMine()){
+                    }
+                    if (r+1 < rows && c+1 < columns && board[r+1][c+1].isMine()){
                         // Num Downward Right (rows + columns) + 1
                         count++;
                     }
@@ -94,16 +98,14 @@ public class MinesweeperBoard{
         System.out.println(" ");
         for (int r = 0; r < board.length; r++){
             for (int c = 0; c < board[0].length; c++){
-                if ((r%columns) == 0 && r != 0){
-                    System.out.println(" ");
-                }
+                int line = board[r][c].getValue();
                 if (board[r][c].isMine()){
-                    System.out.print("X");
+                    System.out.print("X ");
                 }else {
-                    System.out.print(board[r][c].getValue());
+                    System.out.print(line + " ");
                 }
-                System.out.print(" ");
             }
+            System.out.println(" ");
         }
     }
 
