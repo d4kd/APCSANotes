@@ -120,5 +120,3 @@ public class MinesweeperBoard{
         return panel;
     }
 }
-
-
