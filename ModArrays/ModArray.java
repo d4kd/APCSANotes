@@ -27,8 +27,9 @@ public class ModArray
         // removeNum(1)
         // Goal: {3,1,9,2,0}
         for (int i = index; i < arr.length-1; i++){
-            arr[i] = arr[i-1];
+
+            arr[i] = arr[i+1];
         }
-        arr[arr.length-1] = 0;
+        //arr[arr.length -1] = 0;
     }
 }
