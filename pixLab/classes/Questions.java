@@ -51,19 +51,19 @@ public class Questions
     // It is there.
     // 3.Does the following code compile?
     // DigitalPicture p = new DigitalPicture();
-    // ____, the following code __ compile.
+    // Yes, the following code does compile.
     // 4.Assuming that a no-argument constructor exists for SimplePicture,would the following code compile?
     // DigitalPicture p = new SimplePicture();
-    // ____, the following code __ compile.
+    // Yes, the following code does compile.
     // 5.Assuming that a no-argument constructor exists for Picture,does the following code compile?
     // DigitalPicture p = new Picture();
-    // ____, the following code __ compile.
+    // Yes, the following code does compile.
     // 6.Assuming that a no-argument constructor exists for Picture,does the following code compile?
     // SimplePicture p = new Picture();
-    // ____, the following code __ compile.
+    // Yes, the following code does compile.
     // 7.Assuming that a no-argument constructor exists for SimplePicture,does the following code compile?
     // Picture p = new SimplePicture(); 
-    //  ____, the following code __ compile.
+    // No, the following code doesn't compile.
 
     // A7: Questions
     // 1.How many times would the body of this nested for loop execute?

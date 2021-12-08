@@ -294,23 +294,33 @@ public class Picture extends SimplePicture
                 botPixel.setColor(topPixel.getColor());
             }
         }
+
+        for (int row = 155; row < mirrorPoint; row++)
+        {
+            for (int col = 240; col < 395; col++)
+            {
+                topPixel = pixels[row][col];
+                botPixel = pixels[mirrorPoint - row + mirrorPoint][col];
+                botPixel.setColor(topPixel.getColor());
+            }
+        }
     }
 
     public void mirrorGull()
     {
-        // int mirrorPoint = 000;
-        // Pixel topPixel = null;
-        // Pixel botPixel = null;
-        // Pixel[][] pixels = this.getPixels2D();
-        // for (int row = 000; row < 000; row++)
-        // {
-            // for (int col = 000; col < mirrorPoint; col++)
-            // {
-                // topPixel = pixels[row][col];
-                // botPixel = pixels[row][mirrorPoint - col + mirrorPoint];
-                // botPixel.setColor(topPixel.getColor());
-            // }
-        // }
+        int mirrorPoint = 350;
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        Pixel[][] pixels = this.getPixels2D();
+        for (int row = 230; row < 325; row++)
+        {
+            for (int col = 225; col < mirrorPoint; col++)
+            {
+                leftPixel = pixels[row][col];      
+                rightPixel = pixels[row][mirrorPoint - col + mirrorPoint]; 
+                rightPixel.setColor(leftPixel.getColor());
+            }
+        }
     }
 
     /** copy from the passed fromPic to the
@@ -335,6 +345,30 @@ public class Picture extends SimplePicture
             for (int fromCol = 0, toCol = startCol; 
             fromCol < fromPixels[0].length &&
             toCol < toPixels[0].length;  
+            fromCol++, toCol++)
+            {
+                fromPixel = fromPixels[fromRow][fromCol];
+                toPixel = toPixels[toRow][toCol];
+                toPixel.setColor(fromPixel.getColor());
+            }
+        }   
+    }
+
+    public void copy2(Picture fromPic, 
+    int startRow, int startCol, int endRow, int endCol)
+    {
+        Pixel fromPixel = null;
+        Pixel toPixel = null;
+        Pixel[][] toPixels = this.getPixels2D();
+        Pixel[][] fromPixels = fromPic.getPixels2D();
+        for (int fromRow = 0, toRow = startRow; 
+        fromRow < fromPixels.length &&
+        toRow < endRow; 
+        fromRow++, toRow++)
+        {
+            for (int fromCol = 0, toCol = startCol; 
+            fromCol < fromPixels[0].length &&
+            toCol < endCol;
             fromCol++, toCol++)
             {
                 fromPixel = fromPixels[fromRow][fromCol];
@@ -372,8 +406,7 @@ public class Picture extends SimplePicture
         Color rightColor = null;
         for (int row = 0; row < pixels.length; row++)
         {
-            for (int col = 0; 
-            col < pixels[0].length-1; col++)
+            for (int col = 0; col < pixels[0].length-1; col++)
             {
                 leftPixel = pixels[row][col];
                 rightPixel = pixels[row][col+1];
@@ -383,6 +416,23 @@ public class Picture extends SimplePicture
                     leftPixel.setColor(Color.BLACK);
                 else
                     leftPixel.setColor(Color.WHITE);
+            }
+        }
+
+        Pixel topPixel = null;
+        Pixel botPixel = null;
+        Color botColor = null;
+        for (int row = 0; row < pixels.length; row++)
+        {
+            for (int col = 0; col < pixels[0].length-1; col++)
+            {
+                topPixel = pixels[row][col + 1];
+                botPixel = pixels[row][col];
+                botColor = botPixel.getColor();
+                if (topPixel.colorDistance(botColor) > edgeDist)
+                    topPixel.setColor(Color.BLACK);
+                else
+                    topPixel.setColor(Color.WHITE);
             }
         }
     }
