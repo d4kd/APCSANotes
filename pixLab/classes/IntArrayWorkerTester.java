@@ -95,10 +95,10 @@ public class IntArrayWorkerTester
     {
         testSetMatrix();
         testFillPattern1();
-        //testGetCount(); 
+        testGetCount(); 
         testGetTotal();
         testGetTotalNested();
-        //testGetLargest();
-        //testGetColTotal();
+        testGetLargest();
+        testGetColTotal();
     }
 }

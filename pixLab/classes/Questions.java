@@ -74,4 +74,6 @@ public class Questions
     // for (int row = 5; row <= 11; row++)
     // for (int col = 3; col <= 18; col++)
     // 6 - row, 15 - col = 112 counts
+    //
+    // A1-A7 Exercises: Done
 }

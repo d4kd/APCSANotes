@@ -400,9 +400,9 @@ public class Picture extends SimplePicture
      */
     public void edgeDetection(int edgeDist)
     {
+        Pixel[][] pixels = this.getPixels2D();
         Pixel leftPixel = null;
         Pixel rightPixel = null;
-        Pixel[][] pixels = this.getPixels2D();
         Color rightColor = null;
         for (int row = 0; row < pixels.length; row++)
         {

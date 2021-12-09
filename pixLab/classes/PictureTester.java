@@ -174,7 +174,6 @@ public class PictureTester
         testCollage();
         testCopy();
         testEdgeDetection();
-        // testEdgeDetection2();
         // testChromakey();
         // testEncodeAndDecode();
         // testGetCountRedOverValue(250);
