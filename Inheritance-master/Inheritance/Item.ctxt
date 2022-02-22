@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Item
+comment1.params=name
+comment1.target=void\ getName(java.lang.String)
+comment2.params=
+comment2.target=void\ getCondition()
+comment3.params=
+comment3.target=void\ itemBuy()
+comment4.params=
+comment4.target=void\ itemSell()
+numComments=5

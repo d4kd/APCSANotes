@@ -23,13 +23,13 @@ public class Loops
         }
         System.out.println(i);
     }
-    public static void counByTwos(){
+    public static void countByTwos(){
         for(int i = 2; i < 11;i+=2){
 
             System.out.println("The number is " + i);
         }
     }
-        public static void counByOdds(){
+        public static void countByOdds(){
         for(int i = 1; i < 11;i+=2){
 
             System.out.println("The number is " + i);
