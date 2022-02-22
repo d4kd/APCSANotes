@@ -1,8 +1,4 @@
 #BlueJ class context
 comment0.target=Weapon
-comment0.text=\r\n\ This\ \r\n\r\n\ @author\ Carmona\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=int\ attack()
-comment2.params=
-comment2.target=boolean\ parry()
-numComments=3
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ WeaponItem\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+numComments=1
