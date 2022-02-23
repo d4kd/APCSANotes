@@ -7,5 +7,19 @@
  */
 public class Juice extends Drink
 {
+    int numberOfCups;
+    boolean inStock;
+    public Juice(){
+        super();
+        inStock = true;
+    }
     
+    // public Juice(String juice, int cups){
+        // super(juice);
+        // numberOfCups = cups;
+        // if(cups > 20){
+            // inStock = false;
+        // }
+        // inStock = true;
+    // }
 }

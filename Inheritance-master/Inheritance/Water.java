@@ -7,5 +7,18 @@
  */
 public class Water extends Drink
 {
+    int numberInGallons;
+    boolean isTooMuch;
+    public Water(){
+        super();
+        numberInGallons = 5;
+        isTooMuch = true;
+    }
     
+    // public Water(String jar, int gallons){
+        // super(jar);
+        // if(gallons >= 4){
+            
+        // }
+    // }
 }

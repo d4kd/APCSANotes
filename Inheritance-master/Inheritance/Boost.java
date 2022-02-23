@@ -7,5 +7,20 @@
  */
 public class Boost extends Potion
 {
+    int multiplier;
+    boolean isUsed;
+    public Boost(){
+        super();
+        multiplier = 1;
+        isUsed = false;
+    }
     
+    // public Boost(String system, int multi){
+        // super(system);
+        // multiplier = multi;
+        // if (multiplier >= 2){
+            // isUsed = true;
+        // }
+        // isUsed = false;
+    // }
 }
